@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *billAmount;
 @property (weak, nonatomic) IBOutlet UILabel *perPersonLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
-@property (weak, nonatomic) IBOutlet UIButton *calculateButton;
+//@property (weak, nonatomic) IBOutlet UIButton *calculateButton;
 
 @end
 
@@ -39,18 +39,33 @@
     
     
 }
-- (IBAction)numberOfPeople:(id)sender {
-    self.peopleLabel.text = [NSString stringWithFormat:@"%.f people", self.peopleSlider.value];
- //   [self calculateBill];
+
+- (IBAction)numberOfPeopleSlider:(UISlider *)sender {
+    
+    int sliderValue;
+    
+    sliderValue = lroundf(self.peopleSlider.value);
+    
+    [self.peopleSlider setValue:sliderValue animated:YES];
+    
+    self.peopleLabel.text = [NSString stringWithFormat:@"%d people", sliderValue];
+    
+    [self calculateBill];
+    
     [self.billAmount endEditing:YES];
     
     
 }
-- (IBAction)calculateButtonPressed:(UIButton *)sender {
-    
-    [self calculateBill];
-    
-}
+//- (IBAction)numberOfPeople:(id)sender {
+//    
+//    
+//}
+
+//- (IBAction)calculateButtonPressed:(UIButton *)sender {
+//    
+//    [self calculateBill];
+//    
+//}
 
 
 @end
