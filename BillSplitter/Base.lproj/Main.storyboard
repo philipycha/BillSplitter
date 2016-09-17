@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,69 +19,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-lc-GB5">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8aQ-nY-LBw"/>
-                                    <constraint firstAttribute="width" constant="250" id="ksg-BC-dfu"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="numberOfPeopleSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="oHf-Sw-CG8"/>
-                                </connections>
-                            </slider>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Udr-tB-KU6">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="4LN-CM-hNF"/>
-                                    <constraint firstAttribute="height" constant="30" id="cDQ-4V-h9k"/>
+                                    <constraint firstAttribute="width" constant="100" id="3gw-mk-s5U"/>
+                                    <constraint firstAttribute="height" constant="30" id="iOj-uK-Toc"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number of people" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-uX-KlF">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-lc-GB5">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="EO9-nd-ByC"/>
-                                    <constraint firstAttribute="width" constant="153" id="j4s-V9-Hhk"/>
+                                    <constraint firstAttribute="height" constant="30" id="eNb-1D-gzq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3f-4K-x82">
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="9NC-Go-an8"/>
-                                    <constraint firstAttribute="height" constant="30" id="poc-iT-7C1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S92-zo-Wdh"/>
+                                    <action selector="numberOfPeopleSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="oHf-Sw-CG8"/>
                                 </connections>
-                            </button>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-G6-jhU">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Yny-gi-gIe"/>
-                                    <constraint firstAttribute="width" constant="154" id="tQQ-Vv-AFe"/>
+                                    <constraint firstAttribute="width" constant="250" id="2Pr-zb-Q1Q"/>
+                                    <constraint firstAttribute="height" constant="21" id="iB1-NG-7CA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number of people" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-uX-KlF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="lkK-9P-3VG"/>
+                                    <constraint firstAttribute="height" constant="21" id="mLJ-Jb-umi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Udr-tB-KU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1J-d1-Nay"/>
-                            <constraint firstItem="2qu-uX-KlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LoH-Qh-fzV"/>
-                            <constraint firstItem="cTU-lc-GB5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="TvZ-cT-XXk"/>
-                            <constraint firstItem="NcY-G6-jhU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="WT8-ef-SpZ"/>
-                            <constraint firstItem="NcY-G6-jhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diy-Ep-nCL"/>
-                            <constraint firstItem="a3f-4K-x82" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dpx-iN-VDl"/>
-                            <constraint firstItem="cTU-lc-GB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbz-IA-mfO"/>
-                            <constraint firstItem="2qu-uX-KlF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="qeF-Gr-sDD"/>
-                            <constraint firstItem="a3f-4K-x82" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="qgH-Gx-J93"/>
-                            <constraint firstItem="Udr-tB-KU6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-25" id="wWI-Ee-1EF"/>
+                            <constraint firstItem="Udr-tB-KU6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0lS-kz-lEh"/>
+                            <constraint firstItem="2qu-uX-KlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5jU-Rf-6JL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NcY-G6-jhU" secondAttribute="bottom" constant="217" id="AGw-KT-ydL"/>
+                            <constraint firstItem="Udr-tB-KU6" firstAttribute="top" secondItem="cTU-lc-GB5" secondAttribute="bottom" constant="145" id="DI7-kc-XcN"/>
+                            <constraint firstItem="NcY-G6-jhU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46.5" id="FDn-vH-lcz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cTU-lc-GB5" secondAttribute="trailing" constant="42" id="NG2-WK-tqZ"/>
+                            <constraint firstItem="2qu-uX-KlF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="PJ4-IZ-OkN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NcY-G6-jhU" secondAttribute="trailing" constant="46.5" id="Y7E-Yb-Fnr"/>
+                            <constraint firstItem="NcY-G6-jhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gQv-3E-iXR"/>
+                            <constraint firstItem="NcY-G6-jhU" firstAttribute="top" secondItem="Udr-tB-KU6" secondAttribute="bottom" constant="81" id="hFy-Dv-OIe"/>
+                            <constraint firstItem="Udr-tB-KU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ubm-kr-d2w"/>
+                            <constraint firstItem="cTU-lc-GB5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="wdz-K4-NV6"/>
+                            <constraint firstItem="cTU-lc-GB5" firstAttribute="top" secondItem="2qu-uX-KlF" secondAttribute="bottom" constant="33" id="xLa-cw-R7f"/>
                         </constraints>
                     </view>
                     <connections>
@@ -92,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="136.80000000000001" y="174.96251874062969"/>
         </scene>
     </scenes>
 </document>
