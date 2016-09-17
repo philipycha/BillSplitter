@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-lc-GB5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8aQ-nY-LBw"/>
+                                    <constraint firstAttribute="width" constant="250" id="ksg-BC-dfu"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="numberOfPeople:" destination="BYZ-38-t0r" eventType="valueChanged" id="FU0-FJ-4vy"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Udr-tB-KU6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="4LN-CM-hNF"/>
+                                    <constraint firstAttribute="height" constant="30" id="cDQ-4V-h9k"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number of people" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-uX-KlF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EO9-nd-ByC"/>
+                                    <constraint firstAttribute="width" constant="153" id="j4s-V9-Hhk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3f-4K-x82">
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="9NC-Go-an8"/>
+                                    <constraint firstAttribute="height" constant="30" id="poc-iT-7C1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S92-zo-Wdh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-G6-jhU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Yny-gi-gIe"/>
+                                    <constraint firstAttribute="width" constant="154" id="tQQ-Vv-AFe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Udr-tB-KU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1J-d1-Nay"/>
+                            <constraint firstItem="2qu-uX-KlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LoH-Qh-fzV"/>
+                            <constraint firstItem="cTU-lc-GB5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="TvZ-cT-XXk"/>
+                            <constraint firstItem="NcY-G6-jhU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="WT8-ef-SpZ"/>
+                            <constraint firstItem="NcY-G6-jhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diy-Ep-nCL"/>
+                            <constraint firstItem="a3f-4K-x82" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dpx-iN-VDl"/>
+                            <constraint firstItem="cTU-lc-GB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbz-IA-mfO"/>
+                            <constraint firstItem="2qu-uX-KlF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="qeF-Gr-sDD"/>
+                            <constraint firstItem="a3f-4K-x82" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="qgH-Gx-J93"/>
+                            <constraint firstItem="Udr-tB-KU6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-25" id="wWI-Ee-1EF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billAmount" destination="Udr-tB-KU6" id="gC1-xm-Q2X"/>
+                        <outlet property="peopleLabel" destination="2qu-uX-KlF" id="zTw-L7-i8j"/>
+                        <outlet property="peopleSlider" destination="cTU-lc-GB5" id="UYX-PZ-KT9"/>
+                        <outlet property="perPersonLabel" destination="NcY-G6-jhU" id="U9P-2g-qHh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
